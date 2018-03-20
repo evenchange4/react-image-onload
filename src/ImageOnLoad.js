@@ -44,7 +44,7 @@ class InputOnLoad extends React.Component<Props> {
   props: Props;
   render() {
     const { onRef, onLoad } = this;
-    const otherProps = omit(['onLoad'])(this.props);
+    const otherProps: Object = omit(['onLoad'])(this.props);
 
     return <img ref={onRef} onLoad={onLoad} {...otherProps} />;
   }
