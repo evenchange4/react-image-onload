@@ -6,8 +6,8 @@ import { setOptions } from '@storybook/addon-options';
 setAddon(infoAddon);
 setDefaults({ inline: true });
 setOptions({
-  name: 'react-input-files',
-  url: 'https://github.com/evenchange4/react-input-files',
+  name: 'react-image-onload',
+  url: 'https://github.com/evenchange4/react-image-onload',
   sortStoriesByKind: true,
 });
 
