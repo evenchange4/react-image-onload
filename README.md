@@ -41,6 +41,7 @@ import ImageOnLoad from 'react-image-onload';
 
 ```js
 type Props = {
+  src: string,
   onLoad: (image: HTMLImageElement) => Promise<void> | void,
 };
 ```

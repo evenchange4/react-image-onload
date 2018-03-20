@@ -5,11 +5,13 @@ import omit from 'ramda/src/omit';
 import PropTypes from 'prop-types';
 
 export type Props = {
+  src: string,
   onLoad: (image: HTMLImageElement) => Promise<void> | void,
 };
 
 class InputOnLoad extends React.Component<Props> {
   static propTypes = {
+    src: PropTypes.string,
     onLoad: PropTypes.func.isRequired, // (image: HTMLImageElement) => Promise<void> | void,
   };
   componentDidMount() {
@@ -19,6 +21,11 @@ class InputOnLoad extends React.Component<Props> {
     if (image && image.complete) {
       this.isLoaded = true;
       onLoad(image);
+    }
+  }
+  componentWillReceiveProps(nextProps: Props) {
+    if (nextProps.src !== this.props.src) {
+      this.isLoaded = false;
     }
   }
   componentWillUnmount() {
@@ -37,7 +44,7 @@ class InputOnLoad extends React.Component<Props> {
   props: Props;
   render() {
     const { onRef, onLoad } = this;
-    const otherProps = omit(['onLoad'])(this.props);
+    const otherProps: Object = omit(['onLoad'])(this.props);
 
     return <img ref={onRef} onLoad={onLoad} {...otherProps} />;
   }
