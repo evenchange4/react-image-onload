@@ -1,0 +1,132 @@
+{
+  "name": "react-image-onload",
+  "version": "0.1.0",
+  "description": "React Image onLoad event.",
+  "author": "Michael Hsu <evenchange4@gmail.com>",
+  "license": "MIT",
+  "typings": "./index.d.ts",
+  "main": "lib/index.js",
+  "files": ["lib", "index.d.ts"],
+  "scripts": {
+    "clean": "rm -rf lib",
+    "prebuild": "npm run clean",
+    "build":
+      "NODE_ENV=production babel src --out-dir lib --ignore '**/*.example.js,**/__tests__/*'",
+    "test": "NODE_ENV='test' jest --coverage --runInBand",
+    "test:watch": "npm run test -- --watch",
+    "start": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "eslint": "eslint ./",
+    "flow": "flow",
+    "precommit": "lint-staged",
+    "format": "prettier --write 'src/**/*.js' '.storybook/*.js' '*.{json,md}'",
+    "changelog":
+      "github-changes -o evenchange4 -r react-image-onload -b master -f ./CHANGELOG.md --order-semver --use-commit-body"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.1",
+    "ramda": "^0.25.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.0.0-beta.42",
+    "@babel/core": "7.0.0-beta.42",
+    "@babel/node": "7.0.0-beta.42",
+    "@babel/preset-env": "7.0.0-beta.42",
+    "@storybook/addon-actions": "3.3.15",
+    "@storybook/addon-info": "3.3.15",
+    "@storybook/addon-links": "3.3.15",
+    "@storybook/addon-options": "3.3.15",
+    "@storybook/addon-storyshots": "3.3.15",
+    "@storybook/react": "3.3.15",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "8.2.2",
+    "babel-jest": "22.1.0",
+    "babel-plugin-add-module-exports": "0.2.1",
+    "babel-preset-react-app": "next",
+    "codecov": "3.0.0",
+    "enzyme": "3.3.0",
+    "enzyme-adapter-react-16": "1.1.1",
+    "enzyme-to-json": "3.3.3",
+    "eslint": "4.19.0",
+    "eslint-config-airbnb": "16.1.0",
+    "eslint-config-prettier": "2.9.0",
+    "eslint-plugin-flowtype": "2.46.1",
+    "eslint-plugin-import": "2.9.0",
+    "eslint-plugin-jest": "21.15.0",
+    "eslint-plugin-jsx-a11y": "6.0.3",
+    "eslint-plugin-prettier": "2.6.0",
+    "eslint-plugin-react": "7.7.0",
+    "flow-bin": "0.68.0",
+    "github-changes": "1.1.2",
+    "husky": "0.14.3",
+    "jest": "22.4.2",
+    "lint-staged": "7.0.0",
+    "prettier": "1.11.1",
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
+    "react-test-renderer": "16.2.0"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/setupTests.js",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/**/*.test.js",
+      "!src/**/*.example.js"
+    ],
+    "testPathIgnorePatterns": ["<rootDir>/node_modules/", "<rootDir>/lib/"],
+    "resetMocks": true,
+    "resetModules": true
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "singleQuote": true
+  },
+  "lint-staged": {
+    "*.{js,json,md}": ["prettier --write", "git add"]
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": [
+      "airbnb",
+      "plugin:flowtype/recommended",
+      "plugin:jest/recommended",
+      "prettier",
+      "prettier/react",
+      "prettier/flowtype"
+    ],
+    "plugins": ["prettier", "jest", "flowtype"],
+    "env": {
+      "jest/globals": true
+    },
+    "rules": {
+      "prettier/prettier": "error",
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [".js"]
+        }
+      ],
+      "import/no-extraneous-dependencies": 0,
+      "jsx-a11y/no-static-element-interactions": 0,
+      "react/forbid-prop-types": 0,
+      "react/require-default-props": 0
+    }
+  },
+  "eslintIgnore": [
+    "node_modules",
+    "coverage",
+    "storybook-static",
+    "lib",
+    "flow-typed"
+  ],
+  "keywords": ["react", "image"],
+  "bugs": {
+    "url": "https://github.com/evenchange4/react-image-onload/issues",
+    "email": "evenchange4@gmail.com"
+  },
+  "homepage": "https://github.com/evenchange4/react-image-onload#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evenchange4/react-image-onload.git"
+  }
+}

@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots ImageOnLoad Basic 1`] = `
+<InputOnLoad
+  onLoad={[Function]}
+  src="http://via.placeholder.com/350x150"
+>
+  <img
+    onLoad={[Function]}
+    src="http://via.placeholder.com/350x150"
+  />
+</InputOnLoad>
+`;
+
+exports[`Storyshots ImageOnLoad With two images 1`] = `
+Array [
+  <InputOnLoad
+    onLoad={[Function]}
+    src="http://via.placeholder.com/350x150"
+  >
+    <img
+      onLoad={[Function]}
+      src="http://via.placeholder.com/350x150"
+    />
+  </InputOnLoad>,
+  <InputOnLoad
+    onLoad={[Function]}
+    src="http://via.placeholder.com/350x150"
+  >
+    <img
+      onLoad={[Function]}
+      src="http://via.placeholder.com/350x150"
+    />
+  </InputOnLoad>,
+]
+`;
