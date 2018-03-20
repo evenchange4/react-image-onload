@@ -9,7 +9,7 @@ storiesOf('ImageOnLoad', module)
   .add(
     'Basic',
     withInfo({
-      text: `API: https://github.com/evenchange4/ImageOnLoad#api`,
+      text: `API: https://github.com/evenchange4/react-image-onload#api`,
       inline: true,
     })(() => (
       <ImageOnLoad
@@ -21,7 +21,7 @@ storiesOf('ImageOnLoad', module)
   .add(
     'With two images',
     withInfo({
-      text: `API: https://github.com/evenchange4/ImageOnLoad#api`,
+      text: `API: https://github.com/evenchange4/react-image-onload#api`,
       inline: true,
       propTables: [ImageOnLoad],
     })(() => (
