@@ -30,7 +30,7 @@ $ yarn add react-image-onload
 ```js
 import ImageOnLoad from 'react-image-onload';
 
-<StyledImageOnLoad
+<ImageOnLoad
   onLoad={({ width, height }: HTMLImageElement) => {}}
   src="image"
   alt="background image"
