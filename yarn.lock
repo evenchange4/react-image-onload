@@ -4701,9 +4701,10 @@ flatten@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/flatten/-/flatten-1.0.2.tgz#dae46a9d78fbe25292258cc1e780a41d95c03782"
 
-flow-bin@0.68.0:
-  version "0.68.0"
-  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.68.0.tgz#86c2d14857d306eb2e85e274f2eebf543564f623"
+flow-bin@0.339.0:
+  version "0.339.0"
+  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.339.0.tgz#7b41102d0b75d2be210eb9d56356787a83bf6410"
+  integrity sha512-n7rE8A/hZ0Go4cxWbrot0UZrILJj0oLZZrpT8FRwkY7hmteqrpnZsNT5E9ZexquHjAOkpZy/UMgIAwuUllUr9g==
 
 flush-write-stream@^1.0.0:
   version "1.0.2"
